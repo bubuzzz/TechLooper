@@ -1,0 +1,41 @@
+<div class="contestant-page contest-detail-page">
+  <div class="alert alert-warning post-challenge-success" ng-show="postChallengeSuccess">
+    {{'updateEvaluationCriteria1' | translate}}
+    <strong><a ng-click="openEvaluationCriteria()" translate="here"></a></strong>
+    {{'updateEvaluationCriteria2' | translate}}
+  </div>
+  <div class="content-page-block contest-detail-content">
+    <div class="header-page">
+      <h2 class="text-left">
+        <span class="challenge-type public" ng-if="contestDetail.$isPublic"
+              title="{{'publicChallenge' | translate}}"
+            />
+        <span class="challenge-type internal" ng-if="contestDetail.$isInternal"
+              title="{{'internalChallenge' | translate}}"
+            />
+        {{contestDetail.challengeName}}
+        <span ng-if="contestDetail.$currentState.isInProgress || contestDetail.$currentState.isRegistration"
+              ng-class="contestDetail.currentPhaseLowerCase" translate="{{contestDetail.currentPhaseLowerCase}}" />
+        <span ng-if="contestDetail.$currentState.isClosed || contestDetail.$currentState.isNotStart" class="closed"
+              translate="{{contestDetail.$currentState.title}}" />
+      </h2>
+    </div>
+    <div class="row contest-content-detail">
+      <tab-manager-contest-detail></tab-manager-contest-detail>
+      <div class="tab-content contest-content-tab-detail">
+        <div class="detail tab-pane fade in active">
+          <challenge-details-tab></challenge-details-tab>
+        </div>
+        <div class="registrants tab-pane fade" ng-show="contestDetail.isAuthor">
+          <content-registrants-tab></content-registrants-tab>
+        </div>
+        <div class="evaluation-criteria tab-pane fade" ng-show="contestDetail.isAuthor">
+          <content-evaluation-criteria-tab></content-evaluation-criteria-tab>
+        </div>
+        <div class="winner-board tab-pane fade">
+          <winner-board></winner-board>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

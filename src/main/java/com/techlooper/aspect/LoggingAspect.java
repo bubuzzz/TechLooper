@@ -16,14 +16,26 @@ public class LoggingAspect {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoggingAspect.class);
 
     @AfterReturning(pointcut = "execution(* com.techlooper.service.JobStatisticService.count(..))",
-                    returning = "returnValue")
+            returning = "returnValue")
     public void logServiceResult(final JoinPoint joinPoint, final Object returnValue) {
-        LOGGER.info(String.format("Result for searching [%s] is [%s]", joinPoint.getArgs()[0], returnValue));
+        LOGGER.info("Result for searching [{}] is [{}]", joinPoint.getArgs()[0], returnValue);
     }
-    
+
     @AfterReturning(pointcut = "execution(* com.techlooper.service.JobStatisticService.count*())",
-          returning = "returnValue")
+            returning = "returnValue")
     public void logServiceCountResult(final JoinPoint joinPoint, final Object returnValue) {
-       LOGGER.info(String.format("Result for searching by [%s] is [%s]", joinPoint.getSignature().getName(), returnValue));
+        LOGGER.info("Result for searching by [{}] is [{}]", joinPoint.getSignature().getName(), returnValue);
     }
+
+    /* location / {
+    proxy_pass  ;
+    proxy_redirect off;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_read_timeout 300s;
+    proxy_buffering off;
+    rewrite ^/(.*) /#/bubble-chart/ break;
+  }
+}*/
 }

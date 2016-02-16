@@ -1,0 +1,176 @@
+{
+  "name": "TechLooper",
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "components-font-awesome": "latest",
+    "sockjs": "latest",
+    "stomp-websocket": "latest",
+    "angular": "latest",
+    "angular-resource": "latest",
+    "angular-route": "latest",
+    "angular-cookies": "latest",
+    "angular-translate": "latest",
+    "angular-translate-storage-local": "latest",
+    "angular-translate-storage-cookie": "latest",
+    "angular-translate-loader-static-files": "latest",
+    "angular-mousetrap": "latest",
+    "jQuery.dotdotdot": "latest",
+    "highcharts-release": "latest",
+    "ngInfiniteScroll": "latest",
+    "selectize": "latest",
+    "angular-selectize2": "1.2.3",
+    "perfect-scrollbar": "latest",
+    "mousetrap": "latest",
+    "JSONPath": "latest",
+    "DateJS": "latest",
+    "d3": "latest",
+    "parallax": "latest",
+    "seiyria-bootstrap-slider": "latest",
+    "cafej": "latest",
+    "bootstrap-tour": "latest",
+    "jScrollPane": "latest",
+    "satellizer": "latest",
+    "angular-local-storage": "latest",
+    "jquery.easing": "latest",
+    "bootstrap-select": "latest",
+    "blueimp-gallery": "latest",
+    "blueimp-bootstrap-image-gallery": "latest",
+    "sprintf": "latest",
+    "allmighty-autocomplete": "latest",
+    "ng-focus-on": "latest",
+    "bootstrap-datepicker": "latest",
+    "jquery.cookie": "latest",
+    "angular-sanitize": "latest",
+    "moment": "latest",
+    "angular-strap": "latest",
+    "datetimepicker": "latest",
+    "angular-summernote": "latest",
+    "underscore": "latest",
+    "numeral": "latest"
+  },
+  "overrides": {
+    "jquery": {
+      "main": "dist/jquery.min.js"
+    },
+    "bootstrap": {
+      "main": "dist/js/bootstrap.min.js"
+    },
+    "sockjs": {
+      "main": "sockjs.min.js"
+    },
+    "stomp-websocket": {
+      "main": "lib/stomp.min.js"
+    },
+    "angular": {
+      "main": "angular.min.js"
+    },
+    "angular-resource": {
+      "main": "angular-resource.min.js"
+    },
+    "angular-route": {
+      "main": "angular-route.min.js"
+    },
+    "angular-cookies": {
+      "main": "angular-cookies.min.js"
+    },
+    "angular-translate": {
+      "main": "angular-translate.min.js"
+    },
+    "angular-translate-storage-local": {
+      "main": "angular-translate-storage-local.min.js"
+    },
+    "angular-translate-storage-cookie": {
+      "main": "angular-translate-storage-cookie.min.js"
+    },
+    "angular-translate-loader-static-files": {
+      "main": "angular-translate-loader-static-files.min.js"
+    },
+    "highcharts-release": {
+      "main": "highcharts.js"
+    },
+    "ngInfiniteScroll": {
+      "main": "build/ng-infinite-scroll.min.js"
+    },
+    "selectize": {
+      "main": "dist/js/standalone/selectize.min.js"
+    },
+    "perfect-scrollbar": {
+      "main": "js/perfect-scrollbar.js"
+    },
+    "jQuery.dotdotdot": {
+      "main": "src/js/jquery.dotdotdot.min.js"
+    },
+    "mousetrap": {
+      "main": [
+        "mousetrap.min.js",
+        "plugins/global-bind/mousetrap-global-bind.min.js"
+      ]
+    },
+    "DateJS": {
+      "main": "build/date.js"
+    },
+    "d3": {
+      "main": "d3.min.js"
+    },
+    "parallax": {
+      "main": "deploy/jquery.parallax.min.js"
+    },
+    "seiyria-bootstrap-slider": {
+      "main": "dist/bootstrap-slider.min.js"
+    },
+    "jScrollPane": {
+      "main": [
+        "script/jquery.jscrollpane.js",
+        "script/jquery.mousewheel.js"
+      ]
+    },
+    "bootstrap-tour": {
+      "main": "build/js/bootstrap-tour-standalone.min.js"
+    },
+    "satellizer": {
+      "main": "satellizer.min.js"
+    },
+    "angular-local-storage": {
+      "main": "dist/angular-local-storage.min.js"
+    },
+    "jquery.easing": {
+      "main": "js/jquery.easing.js"
+    },
+    "bootstrap-select": {
+      "main": "dist/js/bootstrap-select.js"
+    },
+    "blueimp-gallery": {
+      "main": "js/jquery.blueimp-gallery.min.js"
+    },
+    "blueimp-bootstrap-image-gallery": {
+      "main": "js/bootstrap-image-gallery.js"
+    },
+    "bootstrap-datepicker": {
+      "main": [
+        "dist/css/bootstrap-datepicker.css",
+        "dist/css/bootstrap-datepicker3.css",
+        "dist/js/bootstrap-datepicker.min.js"
+      ]
+    },
+    "moment": {
+      "main": [
+        "moment.js",
+        "locale/vi.js"
+      ]
+    },
+    "eonasdan-bootstrap-datetimepicker": {
+      "main": [
+        "build/css/bootstrap-datetimepicker.min.css",
+        "build/js/bootstrap-datetimepicker.min.js"
+      ]
+    },
+    "angular-summernote": {
+      "main": "dist/angular-summernote.js"
+    }
+  },
+  "resolutions": {
+    "angular": ">=1.4.0",
+    "angular-translate": "2.9.0"
+  }
+}

@@ -1,0 +1,432 @@
+.contestant-page
+  display: inline-block
+  clear: both
+  width: 100%
+  text-align: center
+  .all-contests-block
+    margin: auto
+    max-width: 1000px
+    text-align: left
+    .all-contests-header
+      width: 100%
+      display: block
+      clear: both
+      -webkit-box-shadow: 0 1px 0 0 #ebebeb
+      -moz-box-shadow: 0 1px 0 0 #ebebeb
+      box-shadow: 0 1px 0 0 #ebebeb
+      background-color: #f3fafe
+      text-align: center
+      h2
+        clear: both
+        display: inline-block
+        font-size: 20px
+        font-weight: 400
+        margin: 0
+        padding: 12px 20px 5px
+        text-transform: capitalize
+        width: 100%
+      p
+        font-size: 12px
+        font-style: italic
+        margin-bottom: 1px
+        padding: 0 20px 15px
+    .all-contests-list
+      display: block
+      clear: both
+      padding: 20px
+      text-align: left
+      -webkit-border-bottom-right-radius: 5px
+      -webkit-border-bottom-left-radius: 5px
+      -moz-border-radius-bottomright: 5px
+      -moz-border-radius-bottomleft: 5px
+      border-bottom-right-radius: 5px
+      border-bottom-left-radius: 5px
+      background-color: #fff
+      -webkit-box-shadow: 1px 1px 0px 0px rgba(235,235,235,1)
+      -moz-box-shadow: 1px 1px 0px 0px rgba(235,235,235,1)
+      box-shadow: 1px 1px 0px 0px rgba(235,235,235,1)
+      float: left
+      width: 100%
+      margin-bottom: 20px
+      p
+        text-align: left
+        margin: 0
+        padding: 0
+      p.header
+        font-weight: 500
+  table.contests-table
+    width: 100%
+    margin: 0
+    padding: 0
+    border-collapse: collapse
+    border-spacing: 0
+  table.contests-table tr
+    border-bottom: 1px solid #ddd
+  table.contests-table th, table td
+    padding: 10px
+    text-align: center
+    border: 1px solid #ddd
+  table.contests-table th
+    text-transform: capitalize
+    font-size: 14px
+    background-color: #f1f1f1
+    text-align: center
+    font-weight: 400
+  table.contests-table td
+    p
+      text-align: right !important
+      span
+        width: 90px
+        float: left
+        text-align: left
+    .popover
+      p
+        text-align: center !important
+    a.view
+      background: url(../images/ic-view.png) left top no-repeat
+      width: 33px
+      height: 16px
+      cursor: pointer
+      display: block
+      margin: auto
+    span.tag
+      background-color: #f3fafe
+      border-radius: 5px
+      box-shadow: 1px 1px 1px 1px #cccccc
+      display: inline-block
+      margin-right: 5px
+      padding: 2px 5px
+      width: auto
+      font-size: 12px
+      margin-bottom: 5px
+    span.note
+      display: block
+      clear: both
+  table.contests-table td:nth-child(1)
+    //max-width: 280px
+    text-align: left
+    p
+      text-align: left !important
+      clear: both
+      padding-bottom: 10px
+    a
+      color: #333
+  table.contests-table td:nth-child(2)
+    min-width: 200px
+  table.contests-table td:last-child
+    min-width: 100px
+    text-align: center
+    a
+      display: block
+      text-align: center
+  .contests-list-management
+    display: inline-block
+    clear: both
+    width: 100%
+    background-color: #fff
+    padding: 0
+    margin-bottom: 20px
+    .challenge-search
+      background-color: #f0f3f4
+      padding: 15px
+      button
+        height: 34px
+        padding: 5px 10px
+    .challenge-name-col
+      width: 35%
+      float: left
+      height: 30px
+      text-align: left
+      a
+        font-weight: 500
+    .challenge-timeline-col
+      width: 20%
+      float: left
+      height: 30px
+      text-align: center
+    .challenge-prize-col
+      width: 10%
+      float: left
+      height: 30px
+      text-align: center
+    .challenge-current-phase-col
+      width: 15%
+      float: left
+      height: 30px
+      text-align: center
+    .challenge-registrants-col
+      width: 8%
+      float: left
+      height: 30px
+      text-align: center
+    .challenge-actions-col
+      width: 12%
+      float: left
+      height: 30px
+      text-align: right
+    .contest-list-management-header
+      font-weight: 500
+      font-size: 15px
+      width: 100%
+      clear: both
+      display: inline-block
+      border-bottom: 2px solid #337ab7
+      padding: 20px 20px 0 20px
+    .contest-list-management-body
+      display: inline-block
+      clear: both
+      width: 100%
+      .contest-item-row
+        display: inline-block
+        clear: both
+        width: 100%
+        border-bottom: 1px solid #ddd
+        padding: 25px 20px 10px 20px
+        float: left
+        .label-col
+          display: none
+        .challenge-name-col
+          height: auto
+          a
+            display: block
+            clear: both
+            width: 100%
+            padding: 0  0 5px 0
+            i
+              width: 20px
+              height: 20px
+              display: inline-block
+              float: left
+              background: url("../images/ic-challenge.png") 0px 2px no-repeat
+              background-size: 15px
+          span
+            display: inline-block
+            width: auto
+            background-color: #f4f4f4
+            border: 1px solid #e6e5e5
+            border-radius: 4px
+            color: #7b7b7b
+            font-size: 12px
+            padding: 1px 5px
+            margin-right: 4px
+            margin-bottom: 4px
+        .challenge-timeline-col
+          height: auto
+          p
+            margin: 0
+            padding: 0
+            width: 100%
+            span
+              width: 115px
+              float: left
+              text-align: left
+        .challenge-prize-col
+          height: auto
+          p
+            margin: 0
+            padding: 0
+        .challenge-current-phase-col
+          height: auto
+          span
+            display: inline-block
+            width: auto
+            font-size: 12px
+            border-radius: 4px
+            padding: 0px 4px
+          span.not-started
+            background-color: #00bcd4
+            color: #fff
+          span.registration
+            background-color: #f88568
+            color: #fff
+          span.in-progress
+            background-color: #4caf50
+            color: #fff
+          span.closed
+            background-color: #999999
+            color: #fff
+          span.note
+            display: block
+            width: 100%
+            clear: both
+            border-radius: 0
+            padding: 0
+        .challenge-registrants-col
+          height: auto
+          font-weight: 500
+        .challenge-actions-col
+          height: auto
+          a
+            display: inline-block
+            clear: both
+            background-color: #337ab7
+            border-radius: 4px
+            padding: 5px 8px
+            color: #fff
+            text-align: center
+      .join-sign-in-internal-challenge
+        background-color: #f1f2f7
+        padding: 20px
+        border-radius: 3px
+        margin-top: 20px
+        .sign-in-join
+          width: 100%
+          ul
+            margin: 0
+            padding: 0
+            width: 100%
+            li
+              width: 50%
+              float: left
+              text-align: center
+              font-weight: 500
+
+      .join-internal-challenge
+        background-color: #f1f2f7
+        margin-top: 10px
+        float: left
+        padding: 20px 20px 10px 20px
+        border-radius: 5px
+        width: 100%
+        label
+          font-weight: 400
+          text-transform: capitalize
+          strong
+            font-weight: 500
+            color: red
+        button
+          padding: 8px 20px
+          height: auto
+          width: 100px
+          line-height: inherit
+        span.error-messages
+          color: red
+          font-size: 12px
+          font-style: italic
+        p.title-head
+          padding: 10px 0 15px 0
+          text-align: center
+          font-size: 16px
+          span
+            text-transform: lowercase
+      .contest-item-row.internal
+        background-color: #fffef5
+        .challenge-name-col
+          a
+            i
+              background-position: 0px -62px
+      .contest-item-row.no-data-found
+        text-align: center
+        min-height: 200px
+        padding-top: 50px
+  .submit-phase-contest
+    transition: background-color 1s
+    overflow: hidden
+    width: 100%
+    display: inline-block
+    border-radius: 4px
+    margin-top: 10px
+    position: relative
+  .submit-phase-contest.show
+    background-color: #f1f2f7
+    padding: 20px
+    margin-top: 10px
+    float: left
+    p
+      font-size: 16px
+      span
+        text-transform: lowercase
+    .form-group
+      width: 100%
+      padding: 5px 0
+      clear: both
+      display: block
+      .col-sm-12
+        width: 100%
+      label
+        width: 100%
+        clear: both
+        display: block
+        font-weight: 500
+        span
+          min-width: 145px
+          display: inline-block
+        span.normal
+          font-weight: normal
+        strong
+          font-weight: 500
+          color: red
+        input
+          font-weight: 300
+        textarea
+          font-weight: 300
+    .registrant-name
+      display: inline-block
+      clear: both
+      width: 100%
+      padding-bottom: 5px
+      i
+
+      span
+        width: 18%
+        float: left
+        display: inline-block
+        font-weight: 400
+    .registrant-email
+      display: inline-block
+      clear: both
+      width: 100%
+      padding-bottom: 10px
+      span
+        width: 18%
+        float: left
+        display: inline-block
+        font-weight: 400
+    .phase-description
+      display: inline-block
+      clear: both
+      width: 100%
+      padding-bottom: 5px
+      label
+        width: 18%
+        float: left
+        display: inline-block
+        font-weight: 400
+        strong
+          color: red
+          font-weight: 500
+      input
+        float: left
+        width: 82%
+        clear: none
+      input.passcode
+        width: 180px
+      textarea
+        height: 80px
+        float: left
+        width: 82%
+        clear: none
+      div.error-messages
+        padding-left: 18%
+        width: 100%
+        clear: both
+        display: inline-block
+    .phase-submission
+      text-align: center
+      button
+        margin: auto
+        padding: 6px 30px
+  i.challenge-public
+    width: 20px
+    height: 20px
+    display: inline-block
+    float: left
+    background: url("../images/ic-challenge.png") 0px 2px no-repeat
+    background-size: 15px
+  i.challenge-internal
+    width: 20px
+    height: 20px
+    display: inline-block
+    float: left
+    background: url("../images/ic-challenge.png") 0px -62px no-repeat
+    background-size: 15px

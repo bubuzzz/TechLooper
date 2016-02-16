@@ -1,13 +1,45 @@
 # Created by .gitignore support plugin (hsz.mobi)
-.idea
+
+# generated coffee srcipt
+.coffee.js
+.js.map
+
+# nodejs
 bower_components/
-static/
+node_modules/
+node_tmp/
+node/
+npm.tar.gz
+
+# sass
+.sass-cache/
+*.map
+
+# IntelliJ files
 *.iml
-/target/
-/.settings/
+.idea
+
+# eclipse files
+.settings/
 .project
 .classpath
-/target/
-/target/
-/target/
-/target/
+.externalToolBuilders/
+
+# maven build
+target/
+
+# build folder
+public/
+
+# files to be excluded from source code
+index.html
+css/
+
+# other custom rules
+static/
+*.log
+.brackets.json
+
+#Gruntfile.js
+.tmp/
+.credentials/

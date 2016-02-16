@@ -1,0 +1,58 @@
+<div class="header-site">
+  <div class="personal-header-block">
+    <div class="personal-header-content">
+      <div class="logo-block">
+        <h1><a ng-href="#/{{state('home-url')}}"> <img src="images/logo-small.svg" alt="Career Analytics. Awesome!"></a></h1>
+      </div>
+      <div class="ic-menu-mobile" ng-modal="mobileMenuEmployer" ng-click="mobileMenuEmployer = !mobileMenuEmployer">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="lang-block" ng-model="langKey">
+        <a ng-click="changeLanguages('vi')" ng-show="langKey == 'en'" class="vi">{{'vietnamese' | translate}}</a>
+        <a ng-click="changeLanguages('en')" ng-show="langKey == 'vi'" class="en">{{'english' | translate}}</a>
+      </div>
+      <div class="user-info-basic-block">
+        <a ng-click="logout()" ng-show="$root.userInfo" translate="signOut"></a>
+        <a href="#/home" translate="techTalent" class="homepage-link"></a>
+        <p>{{($root.userInfo.name | textTruncate: 'display-text') || ($root.userInfo.username | textTruncate: 'email')}}</p>
+        <div class="user-avatar" ng-show="$root.userInfo">
+          <img ng-src="{{$root.userInfo.profileImageUrl}}" alt="" ng-show="$root.userInfo.profileImageUrl.length">
+          <img src="images/no-avatar.png" alt="" ng-show="!$root.userInfo.profileImageUrl.length"/>
+        </div>
+        <a ng-show="!$root.userInfo" href="#/user-type" translate="signIn"></a>
+      </div>
+    </div>
+  </div>
+  <div class="main-menu-job-seeker-block" ng-show="!mobileMenuEmployer">
+    <div class="main-menu-job-seeker-content">
+      <ul>
+        <li class="first active" ng-class="{ here: isActive('/hiring') }" ng-click="hideMenu()">
+          <a class="no-icon" href="#/hiring" ng-show="$root.userInfo"><i class="fa fa-caret-down"></i> {{($root.userInfo.name | textTruncate: 'display-text') || ($root.userInfo.username | textTruncate: 'email')}}</a>
+          <a ng-show="!$root.userInfo" href="#/login" translate="signIn" class="jobSeekerSignIn"></a>
+          <div class="sub-menu" ng-show="$root.userInfo">
+            <a href="#/email-setting" translate="emailSetting" class="email-setting"></a>
+            <a ng-click="logout()" translate="signOut" class="sign-out"></a>
+          </div>
+        </li>
+        <li ng-class="{ here: isActive('/employer-dashboard') }" ng-click="hideMenu()">
+          <a href="#/employer-dashboard" translate="myDashboard" class="my-dashboard"></a>
+        </li>
+        <li ng-class="{ here: isActive('/post-challenge') }" ng-click="hideMenu()">
+          <a href="#/post-challenge" translate="postAChallenge" class="post-challenges"></a>
+        </li>
+        <li ng-class="{ here: isActive('/freelancer/post-project') }" ng-click="hideMenu()">
+          <a href="#/freelancer/post-project" translate="postAProject" class="post-freelancer"></a>
+        </li>
+        <li ng-class="{ here: isActive('/price-job') }" ng-click="hideMenu()">
+          <a href="#/price-job" translate="jobPostEvaluation" class="post-evaluation"></a>
+        </li>
+        <li class="mobile" ng-class="{ here: isActive('/email-setting') }" ng-click="hideMenu()">
+          <a href="#/email-setting" translate="emailSetting" class="email-setting"></a>
+        </li>
+        <li class="mobile" ng-class="{ here: isActive('#/home') }" ng-click="hideMenu()">
+          <a href="#/home" translate="techTalent" class="tech-talent"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

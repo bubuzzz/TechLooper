@@ -1,86 +1,41 @@
 package com.techlooper.service;
 
-import com.techlooper.model.TechnicalTermEnum;
+import com.techlooper.model.*;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by chrisshayan on 7/14/14.
  */
 public interface JobStatisticService {
-   /**
-    * Counting BA jobs
-    * @return number of jobs
-    * @see com.techlooper.model.TechnicalTermEnum
-    */
-   Long countBAJobs();
-   
-   /**
-    * Counting Project Manager jobs
-    * @return number of jobs
-    * @see com.techlooper.model.TechnicalTermEnum
-    */
-   Long countProjectManagerJobs();
-   
-   
-    /**
-     * Counting PHP jobs
-     * @return number of jobs
-     * @see com.techlooper.model.TechnicalTermEnum
-     */
-    Long countPhpJobs();
 
     /**
-     * Counting Java jobs
+     * Counting jobs by term
+     *
      * @return number of jobs
-     * @see com.techlooper.model.TechnicalTermEnum
+     * @see com.techlooper.model.TechnicalTerm
      */
-    Long countJavaJobs();
+    public Long count(final TechnicalTerm term);
 
     /**
-     * Counting .NET jobs
-     * @return number of jobs
-     * @see com.techlooper.model.TechnicalTermEnum
+     * Counting jobs by each skill within a certain period in the past
+     *
+     * @param term           See more at {@link com.techlooper.model.TechnicalTerm}
+     * @param histogramEnums See more at {@link com.techlooper.model.HistogramEnum}
+     * @return the skill statistic {@link com.techlooper.model.SkillStatisticResponse}
      */
-    Long countDotNetJobs();
+    SkillStatisticResponse countJobsBySkill(TechnicalTerm term, HistogramEnum... histogramEnums);
 
-    /**
-     * Counts the matching jobs to relevant {@code TechnicalTermEnum}
-     * @param technicalTermEnum a {@code TechnicalTermEnum} to determine which technology search must happen.
-     * @return a {@code Long} that represents number of matching jobs.
-     */
-    Long count(final TechnicalTermEnum technicalTermEnum);
+    Long countJobsBySkillWithinPeriod(final String skill, final HistogramEnum period);
 
-    /**
-     * Counting Ruby jobs
-     * @return number of jobs
-     * @see com.techlooper.model.TechnicalTermEnum
-     */
-    Long countRubyJobs();
+    Long countTotalITJobsWithinPeriod(HistogramEnum period);
 
-    /**
-     * Counting Python jobs
-     * @return number of jobs
-     * @see com.techlooper.model.TechnicalTermEnum
-     */
-    Long countPythonJobs();
+    TermStatisticResponse generateTermStatistic(TermStatisticRequest term, HistogramEnum histogramEnum);
 
-    /**
-     * Counting DBA jobs
-     * @return number of jobs
-     * @see com.techlooper.model.TechnicalTermEnum
-     */
-    Long countDBAJobs();
+    Map<String, Double> getAverageSalaryBySkill(TechnicalTerm term, List<Integer> jobLevelIds);
 
-    /**
-     * Counting QA jobs
-     * @return number of jobs
-     * @see com.techlooper.model.TechnicalTermEnum
-     */
-    Long countQAJobs();
+    GetPromotedResponse getTopDemandedSkillsByJobTitle(GetPromotedRequest request);
 
-    /**
-     * Counting all technical jobs
-     * @return number of jobs
-     * @see com.techlooper.model.TechnicalTermEnum
-     */
-    Long countTechnicalJobs();
+    TechnicalTerm getTechnicalTermHasTheMostJob();
 }

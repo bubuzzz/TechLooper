@@ -1,0 +1,27 @@
+<div class="contestant-page">
+  <div class="all-contests-block">
+    <div class="all-contests-header">
+      <h2 translate="challengeYourself"></h2>
+      <p translate="subChallengeYourselfTagLine"></p>
+    </div>
+    <div class="contests-list-management">
+      <challenge-search-form></challenge-search-form>
+      <div class="contest-list-management-header">
+        <div class="challenge-name-col" translate="challengeName"></div>
+        <div class="challenge-timeline-col" translate="timeline.schedule"></div>
+        <div class="challenge-prize-col" translate="prize"></div>
+        <div class="challenge-current-phase-col" translate="currentPhase"></div>
+        <div class="challenge-registrants-col" translate="registrants"></div>
+        <div class="challenge-actions-col" translate="action"></div>
+      </div>
+
+      <div class="contest-list-management-body">
+        <div class="contest-item-row no-data-found" ng-if="!contestsList.length">
+          <p translate="noData"></p>
+        </div>
+        <challenge-list ng-show="contestsList.length"></challenge-list>
+        <sign-in-internal-challenge></sign-in-internal-challenge>
+      </div>
+    </div>
+  </div>
+</div>
